@@ -8,6 +8,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link ForecastFragment#newInstance} factory method to
@@ -58,9 +61,19 @@ public class ForecastFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_forecast, container, false);
-        view.setBackgroundColor(0x20FF0000);
-        return view;
+        LinearLayout linearLayout = new LinearLayout(getActivity());
+        linearLayout.setBackgroundColor(0xFFFFFF);
+        linearLayout.setOrientation(linearLayout.VERTICAL);
+
+        TextView thursday = new TextView(getActivity());
+        thursday.setText("Thursday: Snowy");
+        ImageView icon = new ImageView(getActivity());
+        icon.setImageResource(R.drawable.snow);
+
+        linearLayout.addView(thursday);
+        linearLayout.addView(icon);
+
+        return linearLayout;
     }
+
 }
