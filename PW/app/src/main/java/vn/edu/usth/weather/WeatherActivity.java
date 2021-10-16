@@ -12,9 +12,15 @@ public class WeatherActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weather);
+
         ForecastFragment firstFragment = new ForecastFragment();
+        WeatherFragment secondFragment = new WeatherFragment();
+
         getSupportFragmentManager().beginTransaction().add(
-                R.id.container, firstFragment).commit();
+                R.id.firstLayout, firstFragment, firstFragment.getTag()).commit();
+        getSupportFragmentManager().beginTransaction().add(
+                R.id.secondLayout, secondFragment, secondFragment.getTag()).commit();
+
         Log.i("Weather", "onCreate() is called");
     }
 

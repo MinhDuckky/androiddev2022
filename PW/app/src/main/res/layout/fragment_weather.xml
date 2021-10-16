@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="330dp"
+    android:id="@+id/firstLayout"
+    android:layout_margin="17dp"
+    android:background="#B4EEB4"
+    android:orientation="horizontal"
+    tools:context=".WeatherFragment">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:text="12°C\nCloudy">
+    </TextView>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="240dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/rain" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="25dp"
+        android:text="Paris" />
+
+
+</RelativeLayout>
