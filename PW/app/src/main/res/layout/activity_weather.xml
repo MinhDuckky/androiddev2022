@@ -7,6 +7,7 @@
     tools:context=".WeatherActivity"
     android:id="@+id/container"
     android:background="#FFFFFF"
+    android:orientation="vertical"
     tools:ignore="MissingConstraints">
 
     <com.google.android.material.tabs.TabLayout
@@ -18,7 +19,7 @@
         android:id="@+id/pager"
         android:layout_below="@id/tab"
         android:layout_width="match_parent"
-        android:layout_height="330dp"/>
+        android:layout_height="wrap_content"/>
 
 
 </RelativeLayout>
